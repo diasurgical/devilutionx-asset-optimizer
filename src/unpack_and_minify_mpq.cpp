@@ -20,6 +20,7 @@
 #include <cel2clx.hpp>
 #include <cl22clx.hpp>
 #include <clx_encode.hpp>
+#include <lame.h>
 #include <libmpq/mpq.h>
 #include <pcx2clx.hpp>
 
