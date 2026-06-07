@@ -107,12 +107,13 @@ target_link_libraries(unpack_and_minify_mpq PRIVATE
   extract_spell_icons
   embedded_files)
 
-add_custom_command(
-  TARGET unpack_and_minify_mpq POST_BUILD
-  DEPENDS unpack_and_minify_mpq
-  COMMAND $<$<CONFIG:release>:${CMAKE_STRIP}>
-  ARGS --strip-all $<TARGET_FILE:unpack_and_minify_mpq>
-)
+if(CMAKE_STRIP)
+  add_custom_command(
+    TARGET unpack_and_minify_mpq POST_BUILD
+    COMMAND $<$<CONFIG:release>:${CMAKE_STRIP}>
+    ARGS --strip-all $<TARGET_FILE:unpack_and_minify_mpq>
+  )
+endif()
 
 install(
   TARGETS unpack_and_minify_mpq
