@@ -4,7 +4,7 @@ include(FetchContent)
 set(ENABLE_INSTALL OFF)
 FetchContent_Declare_ExcludeFromAll(
   dvl_gfx
-  URL https://github.com/diasurgical/clx-conversion-tools/archive/ae39773dc2932b82328507bb51f79fa13b561ec0.tar.gz
-  URL_HASH MD5=3f879a34fa84cc4dc5e81302900bbb44
+  URL https://github.com/diasurgical/clx-conversion-tools/archive/refs/tags/1.3.0.tar.gz
+  URL_HASH MD5=e129a5581d4879a42b9f808ae35a28b9
 )
 FetchContent_MakeAvailable_ExcludeFromAll(dvl_gfx)
